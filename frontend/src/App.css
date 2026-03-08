@@ -1,0 +1,248 @@
+/* 全局样式 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5;
+}
+
+/* 加载状态 */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.loading-container p {
+  margin-top: 16px;
+  color: #666;
+}
+
+/* 布局样式 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  background-color: #001529;
+  color: white;
+  height: 64px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.header-actions .ant-btn {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.header-actions .ant-btn:hover {
+  border-color: white;
+}
+
+.header-actions .ant-btn-primary {
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+
+.sider {
+  background-color: #001529;
+  color: white;
+  padding: 20px 0;
+}
+
+.sider-menu {
+  padding: 0 20px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.menu-item.active {
+  background-color: #1890ff;
+  color: white;
+}
+
+.test-mode-section {
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.test-mode-section h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.content {
+  padding: 24px;
+  overflow: auto;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.content-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  color: #262626;
+}
+
+.health-status {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background-color: #f6ffed;
+  border: 1px solid #b7eb8f;
+  border-radius: 4px;
+  color: #52c41a;
+  font-size: 14px;
+}
+
+.status-item.error {
+  background-color: #fff2f0;
+  border: 1px solid #ffccc7;
+  color: #ff4d4f;
+}
+
+.status-item.test-mode {
+  background-color: #fffbe6;
+  border: 1px solid #ffe58f;
+  color: #faad14;
+}
+
+.content-body {
+  background-color: white;
+  padding: 24px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+  min-height: 500px;
+}
+
+.footer {
+  background-color: white;
+  padding: 24px;
+  text-align: center;
+  border-top: 1px solid #e8e8e8;
+}
+
+.footer p {
+  margin: 4px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* 通用组件样式 */
+.ant-card {
+  margin-bottom: 24px;
+}
+
+.ant-form-item {
+  margin-bottom: 16px;
+}
+
+.ant-table {
+  margin-top: 16px;
+}
+
+.ant-btn {
+  margin-right: 8px;
+}
+
+.ant-input-number {
+  width: 100%;
+}
+
+.ant-select {
+  width: 100%;
+}
+
+.ant-checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .header {
+    padding: 0 16px;
+  }
+  
+  .logo h1 {
+    font-size: 16px;
+  }
+  
+  .sider {
+    width: 180px !important;
+  }
+  
+  .content {
+    padding: 16px;
+  }
+  
+  .content-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .health-status {
+    flex-wrap: wrap;
+  }
+  
+  .content-body {
+    padding: 16px;
+  }
+}
